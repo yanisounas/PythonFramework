@@ -1,9 +1,10 @@
 from wsgiref.simple_server import make_server
 
-from FastFramework.Application import Application
-from FastFramework.Controller import HomeController
+from Controller import HomeController
+from WSGI import Application
 
 import sys
+
 
 app = Application()
 app.new_route("/", "GET", HomeController.home)
